@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LibraryVerse – Liquid Glass Library</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div class="page-gradient"></div>
+
+    <header class="nav">
+        <div class="nav-left">
+            <div class="logo-orb"></div>
+            <span class="logo-text">LibraryVerse</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#hero">Discover</a>
+            <a href="#collections">Collections</a>
+            <a href="#explore">Explore</a>
+            <a href="#about">About</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="glass-button ghost">Sign in</button>
+            <button class="glass-button primary">Join free</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1>Liquid glass <span class="gradient-text">library</span> for your mind.</h1>
+                <p>Browse, collect, and experience books in a calm, immersive space inspired by the newest liquid glass design language.</p>
+                <div class="hero-actions">
+                    <button class="glass-button primary">Start reading</button>
+                    <button class="glass-button ghost">Browse catalog</button>
+                </div>
+
+                <div class="hero-metrics">
+                    <div>
+                        <span class="metric-label">Titles</span>
+                        <span class="metric-value">48,921</span>
+                    </div>
+                    <div>
+                        <span class="metric-label">Readers</span>
+                        <span class="metric-value">120k+</span>
+                    </div>
+                    <div>
+                        <span class="metric-label">Avg. session</span>
+                        <span class="metric-value">34 min</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="glass-panel panel-main">
+                    <div class="panel-header">
+                        <span class="pill pill-soft">Now reading</span>
+                        <span class="pill pill-ghost">Sync across devices</span>
+                    </div>
+                    <div class="panel-body">
+                        <h2 class="panel-title">The Silent Archive</h2>
+                        <p class="panel-subtitle">Chapter 12 · Liquid Pages</p>
+                        <div class="reading-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 68%;"></div>
+                            </div>
+                            <span class="progress-label">68% complete</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-stack">
+                    <div class="glass-card tilt" data-tilt>
+                        <h3>Continue series</h3>
+                        <p>Pick up exactly where you left off, on any device.</p>
+                    </div>
+                    <div class="glass-card tilt delay" data-tilt>
+                        <h3>Smart shelves</h3>
+                        <p>AI-curated shelves that adapt to your reading mood.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="collections" class="collections">
+            <div class="section-header">
+                <h2>Curated collections</h2>
+                <p>Hand-picked shelves that feel like walking into a beautifully lit bookstore.</p>
+            </div>
+
+            <div class="collection-filters">
+                <button class="chip active" data-filter="all">All</button>
+                <button class="chip" data-filter="trending">Trending</button>
+                <button class="chip" data-filter="fiction">Fiction</button>
+                <button class="chip" data-filter="nonfiction">Non‑fiction</button>
+                <button class="chip" data-filter="tech">Technology</button>
+                <button class="chip" data-filter="design">Design</button>
+            </div>
+
+            <div class="books-grid" id="booksGrid">
+                <!-- Cards populated by app.js -->
+            </div>
+        </section>
+
+        <section id="explore" class="explore">
+            <div class="section-header">
+                <h2>Explore your library</h2>
+                <p>Search, filter, and organize with a layout that feels as fluid as liquid glass.</p>
+            </div>
+
+            <div class="explore-layout">
+                <aside class="glass-panel sidebar">
+                    <h3>Quick filters</h3>
+                    <label class="toggle-row">
+                        <input type="checkbox" id="filterFavorites" checked />
+                        <span>Show favorites first</span>
+                    </label>
+                    <label class="toggle-row">
+                        <input type="checkbox" id="filterDownloaded" />
+                        <span>Available offline</span>
+                    </label>
+                    <label class="toggle-row">
+                        <input type="checkbox" id="filterNew" />
+                        <span>New this week</span>
+                    </label>
+
+                    <div class="divider"></div>
+
+                    <h3>Reading goals</h3>
+                    <div class="goal-card">
+                        <div class="goal-header">
+                            <span>2026 goal</span>
+                            <span>32 / 40 books</span>
+                        </div>
+                        <div class="progress-bar thin">
+                            <div class="progress-fill" style="width: 80%;"></div>
+                        </div>
+                        <p>On track · Keep your 4‑week streak.</p>
+                    </div>
+                </aside>
+
+                <div class="glass-panel search-panel">
+                    <div class="search-bar-wrapper">
+                        <div class="search-bar">
+                            <span class="search-icon">⌕</span>
+                            <input id="searchInput" type="text" placeholder="Search by title, author, or keyword" />
+                            <button class="pill pill-soft small">Filters</button>
+                        </div>
+                    </div>
+
+                    <div class="search-results" id="searchResults">
+                        <!-- Dynamic search results -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="glass-panel about-panel">
+                <h2>Designed for deep focus</h2>
+                <p>LibraryVerse is a concept library interface that takes cues from modern operating systems, liquid glass surfaces, and calm gradients to keep you in the flow of reading.</p>
+                <div class="about-grid">
+                    <div>
+                        <h3>Liquid glass surfaces</h3>
+                        <p>Soft blur, subtle depth, and frosted cards that highlight content without visual noise.</p>
+                    </div>
+                    <div>
+                        <h3>Adaptive motion</h3>
+                        <p>Micro‑interactions that respond to your cursor, creating a tactile, responsive environment.</p>
+                    </div>
+                    <div>
+                        <h3>Dark‑ready palette</h3>
+                        <p>A color system built to look stunning in both light and dark contexts.</p>
+                    </div>
+                    <div>
+                        <h3>Built to extend</h3>
+                        <p>Plug in your own backend, auth, and devices to turn this into a full product.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo-orb small"></div>
+                <span class="logo-text">LibraryVerse</span>
+            </div>
+            <span class="footer-copy">© 2026 LibraryVerse. Concept library experience.</span>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Support</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
